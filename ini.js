@@ -76,6 +76,7 @@ function decode (str) {
 
   lines.forEach(function (line, _, __) {
     if (!line || line.match(/^\s*[;#]/)) return
+    line = line.trim()
     var match = line.match(re)
     if (!match) return
     if (match[1] !== undefined) {
